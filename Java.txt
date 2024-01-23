@@ -1,0 +1,72 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package lab_4;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Asus
+ */
+public class SanPhamBai_2 {
+// Tạo lớp sản phẩm
+class SanPham {
+  // Khai báo các thuộc tính của sản phẩm
+  private String maSP; // Mã sản phẩm
+  private String tenSP; // Tên sản phẩm
+  private double giaSP; // Giá sản phẩm
+
+  // Tạo hàm khởi tạo (constructor) cho lớp sản phẩm
+  public SanPham(String maSP, String tenSP, double giaSP) {
+    this.maSP = maSP;
+    this.tenSP = tenSP;
+    this.giaSP = giaSP;
+  }
+
+  // Tạo phương thức nhap() để nhập thông tin sản phẩm từ bàn phím
+  public void nhap() {
+    // Tạo đối tượng Scanner để đọc dữ liệu từ bàn phím
+    Scanner sc = new Scanner(System.in);
+    // Nhập mã sản phẩm
+    System.out.print("Nhập mã sản phẩm: ");
+    maSP = sc.nextLine();
+    // Nhập tên sản phẩm
+    System.out.print("Nhập tên sản phẩm: ");
+    tenSP = sc.nextLine();
+    // Nhập giá sản phẩm
+    System.out.print("Nhập giá sản phẩm: ");
+    giaSP = sc.nextDouble();
+  }
+
+  // Tạo phương thức xuat() để xuất thông tin sản phẩm ra màn hình
+  public void xuat() {
+    // Xuất mã sản phẩm
+    System.out.println("Mã sản phẩm: " + maSP);
+    // Xuất tên sản phẩm
+    System.out.println("Tên sản phẩm: " + tenSP);
+    // Xuất giá sản phẩm
+    System.out.println("Giá sản phẩm: " + giaSP);
+  }
+}
+
+// Tạo lớp chứa phương thức main()
+public class Main {
+  public static void main(String[] args) {
+    // Tạo đối tượng sp1 từ lớp sản phẩm
+    SanPham sp1 = new SanPham("SP01", "Sách", 50000);
+    // Tạo đối tượng sp2 từ lớp sản phẩm
+    SanPham sp2 = new SanPham("SP02", "Bút", 10000);
+    // Gọi phương thức nhap() của đối tượng sp1 để nhập thông tin từ bàn phím
+    sp1.nhap();
+    // Gọi phương thức nhap() của đối tượng sp2 để nhập thông tin từ bàn phím
+    sp2.nhap();
+    // Gọi phương thức xuat() của đối tượng sp1 để xuất thông tin ra màn hình
+    sp1.xuat();
+    // Gọi phương thức xuat() của đối tượng sp2 để xuất thông tin ra màn hình
+    sp2.xuat();
+  }
+}
+
+}
