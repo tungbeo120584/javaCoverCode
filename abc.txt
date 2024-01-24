@@ -1,3 +1,34 @@
-asddzxcx
-11111111111111111111111111111
-123
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package lab_4;
+
+import java.io.PrintStream;
+import java.util.Scanner;
+/**
+ *
+ * @author Asus
+ */
+//ở bài 2 em sẽ sử dụng luôn phần SanPhamBai_1
+public class TestSanPhamBai_2 {
+    // Phương thức main()
+    public static void main(String[] args) {
+        // Tạo 2 đối tượng sp1 và sp2 từ lớp SanPham
+        SanPhamBai1 sp1 = new SanPhamBai1("Ao khoac", 100, 10);
+        SanPhamBai1 sp2 = new SanPhamBai1("ao gi nhiet", 100, 10);
+        // Gọi phương thức nhap() của 2 đối tượng sp1 và sp2 để nhập dữ liệu từ bàn phím
+        System.out.println("Nhap thong tin cho san pham 1:");
+        sp1.nhap();
+        System.out.println("Nhap thong tin cho san pham 2:");
+        sp2.nhap();
+
+        // Gọi phương thức xuat() của 2 đối tượng sp1 và sp2 để xuất thông tin của mỗi đối tượng ra màn hình
+        System.out.println("Thong tin cua san pham 1:");
+        sp1.xuat();
+        System.out.println("Thong tin cua san pham 2:");
+        sp2.xuat();
+    }
+}
+  
+
